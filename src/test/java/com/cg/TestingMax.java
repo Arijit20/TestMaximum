@@ -35,5 +35,18 @@ public class TestingMax {
 	public void testMaximumFloatrAtThird() {
 		Assert.assertEquals((Float)9.9f, TestMaximum.testMax(4.8f, 8.0f, 9.9f));	
 	}
+	
+	@Test
+	public void testMaximumStringAtFirst() {
+		Assert.assertEquals("tiger", TestMaximum.testMax("tiger", "lion", "elephant"));	
+	}
+	@Test
+	public void testMaximumStringAtSecond() {
+		Assert.assertEquals("tiger", TestMaximum.testMax("elephant","tiger", "lion"));	
+	}
+	@Test
+	public void testMaximumStringAtThird() {
+		Assert.assertEquals("tiger", TestMaximum.testMax("lion", "elephant", "tiger"));	
+	}
 }
 
