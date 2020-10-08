@@ -10,43 +10,20 @@ import org.junit.Assert;
 
 public class TestingMax {
    
-	@Test
-	public void testMaximumIntegerAtFirst() {
-		Assert.assertEquals((Integer)8, TestMaximum.testMax(8, 4, 7));	
-	}
-	@Test
-	public void testMaximumIntegerAtSecond() {
-		Assert.assertEquals((Integer)20, TestMaximum.testMax(4, 20, 7));	
-	}
-	@Test
-	public void testMaximumIntegerAtThird() {
-		Assert.assertEquals((Integer)45, TestMaximum.testMax(4, 20, 45));	
-	}
-	
-	@Test
-	public void testMaximumFloatAtFirst() {
-		Assert.assertEquals((Float)4.6f, TestMaximum.testMax(4.6f, 4.5f, 2.6f));	
-	}
-	@Test
-	public void testMaximumFloatAtSecond() {
-		Assert.assertEquals((Float)5.2f, TestMaximum.testMax(4.6f, 5.2f, 1.7f));	
-	}
-	@Test
-	public void testMaximumFloatrAtThird() {
-		Assert.assertEquals((Float)9.9f, TestMaximum.testMax(4.8f, 8.0f, 9.9f));	
-	}
-	
-	@Test
-	public void testMaximumStringAtFirst() {
-		Assert.assertEquals("tiger", TestMaximum.testMax("tiger", "lion", "elephant"));	
-	}
-	@Test
-	public void testMaximumStringAtSecond() {
-		Assert.assertEquals("tiger", TestMaximum.testMax("elephant","tiger", "lion"));	
-	}
-	@Test
-	public void testMaximumStringAtThird() {
-		Assert.assertEquals("tiger", TestMaximum.testMax("lion", "elephant", "tiger"));	
-	}
+   @Test
+   public void testInteger() {
+	   TestMaximum<Integer> test = new TestMaximum<Integer>(23, 54, 89, 74, 52, 65, 48, 98, 100);
+	   Assert.assertEquals((Integer)100, test.max());
+   }
+   @Test
+   public void testFloat() {
+	   TestMaximum<Float> test = new TestMaximum<Float>(5.3f, 5.6f, 8.4f, 7.2f, 9.1f);
+	   Assert.assertEquals((Float)9.1f, test.max());
+   }
+   @Test
+   public void testString() {
+	   TestMaximum<String> test = new TestMaximum<String>("apple", "banana", "grapes", "pineapple");
+	   Assert.assertEquals("pineapple", test.max());
+   }
 }
 

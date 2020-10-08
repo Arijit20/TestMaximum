@@ -1,21 +1,24 @@
 package com.cg;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class TestMaximum <E extends Comparable<E>>{
 	
-	E a, b, c;
+	ArrayList<E> list = new ArrayList<>();
 	
-	public TestMaximum(E a, E b, E c) {
-		this.a = a;
-		this.b = b;
-		this.c = c;
+	public TestMaximum(E...values) {
+		for(E value : values)
+			this.list.add(value);
+	}
+	public E max() {
+		return testMax(list);
 	}
 	
-	public static <E extends Comparable<E>> E testMax(E a, E b, E c) {
-		E max = a;
-		if (b.compareTo(max) > 0)
-			max = b;
-		if (c.compareTo(max) > 0)
-			max = c;
-		return max;
+	public static <E extends Comparable<E>> E testMax(ArrayList<E> list) {
+		if(list.size() == 0)
+			return null;
+		else
+	        return Collections.max(list);
 	}
 }
