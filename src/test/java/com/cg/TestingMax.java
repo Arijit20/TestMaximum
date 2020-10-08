@@ -12,6 +12,6 @@ public class TestingMax {
    
 	@Test
 	public void testMaxiumNumber() {
-		Assert.assertEquals((Integer)8, TestMaximum.testMax(2, 5, 8));	
+		Assert.assertEquals((Integer)8, TestMaximum.testMax(8, 4, 7));	
 	}
 }
