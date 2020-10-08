@@ -6,6 +6,12 @@ import com.cg.TestMaximum;
 
 import static org.junit.Assert.*;
 
+import org.junit.Assert;
+
 public class TestingMax {
    
+	@Test
+	public void testMaxiumNumber() {
+		Assert.assertEquals((Integer)8, TestMaximum.testMax(2, 5, 8));	
+	}
 }
